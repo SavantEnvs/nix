@@ -1,0 +1,9 @@
+project: savantenvs/nix
+target: fuzz-parse-derivation
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-parse-derivation/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-parse-derivation
+    libfuzzer: true
+    dictionary: /mayhem/src/libstore-tests/fuzz/data/derivations.dict

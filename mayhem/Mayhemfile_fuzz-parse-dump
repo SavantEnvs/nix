@@ -1,0 +1,9 @@
+project: savantenvs/nix
+target: fuzz-parse-dump
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-parse-dump/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-parse-dump
+    libfuzzer: true
+    dictionary: /mayhem/src/libutil-tests/fuzz/data/nars.dict

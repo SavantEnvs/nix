@@ -1,0 +1,9 @@
+project: savantenvs/nix
+target: fuzz-parse-dump-case-hacked
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-parse-dump-case-hacked/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-parse-dump-case-hacked
+    libfuzzer: true
+    dictionary: /mayhem/src/libutil-tests/fuzz/data/nars.dict

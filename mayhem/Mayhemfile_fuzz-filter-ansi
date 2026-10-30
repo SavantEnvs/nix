@@ -1,0 +1,8 @@
+project: savantenvs/nix
+target: fuzz-filter-ansi
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-filter-ansi/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-filter-ansi
+    libfuzzer: true

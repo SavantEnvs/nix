@@ -1,0 +1,8 @@
+project: savantenvs/nix
+target: fuzz-handle-json-message
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-handle-json-message/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-handle-json-message
+    libfuzzer: true

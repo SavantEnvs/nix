@@ -1,0 +1,7 @@
+# .git stays in the context: the image needs the full mayhem-branch history
+/build
+/outputs
+**/__pycache__
+*.o
+result
+result-*
